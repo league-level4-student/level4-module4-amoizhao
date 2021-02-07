@@ -46,7 +46,7 @@ public class Runner {
 		//animal can also point to a Fish object since Fish extends Animal
 		animal = new Fish();
 		animal.speak(); //prints "Gurgle Gurgle Gurgle!"
-		
+		 
 		/*CASTING*/
 		//casting is when a reference type is temporarily changed into another reference type.
 		System.out.println("\nCASTING");

@@ -19,8 +19,8 @@ public abstract class Polymorph {
 
 	public void setX(int x) {
 		this.x = x;
-	}
-	
+	} 
+
 	public int getY() {
 		return y;
 	}
@@ -28,7 +28,7 @@ public abstract class Polymorph {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
+
 	public int getwidth() {
 		return width;
 	}
@@ -36,7 +36,7 @@ public abstract class Polymorph {
 	public void setwidth(int width) {
 		this.width = width;
 	}
-	
+
 	public int getheight() {
 		return height;
 	}
@@ -44,9 +44,8 @@ public abstract class Polymorph {
 	public void setheight(int height) {
 		this.height = height;
 	}
-
 	public void update() {
-
+		
 	}
 
 	public abstract void draw(Graphics g);
