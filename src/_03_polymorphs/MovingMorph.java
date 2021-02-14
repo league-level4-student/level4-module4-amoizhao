@@ -31,16 +31,16 @@ public class MovingMorph extends Polymorph {
 			if (direction) {
 				x -= move;
 				if (x < 0) {
-					x += 25;
+					x += 30;
 				} else if (x > 900) {
-					x -= 25;
+					x -= 30;
 				}
 			} else {
 				y -= move;
 				if (y < 0) {
-					y += 25;
+					y += 30;
 				} else if (y > 600) {
-					y -= 25;
+					y -= 30;
 				}
 			}
 		}

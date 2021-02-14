@@ -19,7 +19,7 @@ public class CircleMorph extends Polymorph {
 	@Override
 	public void update() {
 		angle += 1;
-		x += (50 * Math.sin(angle));
-		y += (50 * Math.cos(angle));
+		x += (50 * Math.cos(angle));
+		y += (50 * Math.sin(angle));
 	}
 }

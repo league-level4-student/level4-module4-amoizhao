@@ -22,6 +22,7 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 	Polymorph redPoly;
 	Polymorph movingPoly;
 	Polymorph circlePoly;
+	Polymorph mousePoly;
 
 	ArrayList<Polymorph> polys = new ArrayList<Polymorph>();
 
@@ -41,12 +42,14 @@ public class PolymorphWindow extends JPanel implements ActionListener {
 		movingPoly = new MovingMorph(325, 50);
 		bluePoly = new BluePolymorph(250, 50);
 		circlePoly = new CircleMorph(300, 425);
-
+		mousePoly = new MouseMorph(150, 100);
+		
 		polys.add(bluePoly);
 		polys.add(redPoly);
 		polys.add(movingPoly);
 		polys.add(circlePoly);
-
+		polys.add(mousePoly);
+		
 		timer = new Timer(1000 / 30, this);
 		timer.start();
 	}
