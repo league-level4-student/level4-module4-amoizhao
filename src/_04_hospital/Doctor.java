@@ -21,11 +21,21 @@ public class Doctor {
 		return makesHouseCall;
 	}
 	
-	public void assignPatient(Patient patient) {
-		patients.add(patient);
+	public void assignPatient(Patient patient) throws DoctorFullException {
+		if(patients.size()<3) {
+			patients.add(patient);
+		} else {
+			throw new DoctorFullException();
+		}
 	}
 	
 	public ArrayList<Patient> getPatients() {
 		return patients;
+	}
+	
+	public void doMedicine() {
+		for(Patient patient : patients) {
+			patient.checkPulse();
+		}
 	}
 }
