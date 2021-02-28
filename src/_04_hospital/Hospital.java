@@ -12,9 +12,7 @@ public class Hospital {
 	}
 
 	public void addDoctor(Doctor doctor) {
-		if (doctors.size() < 3 && doctors.size() >= 0) {
-			doctors.add(doctor);
-		}
+		doctors.add(doctor);
 	}
 
 	public ArrayList<Doctor> getDoctors() {
@@ -22,9 +20,8 @@ public class Hospital {
 	}
 
 	public void addPatient(Patient patient) {
-		if (patients.size() < 3 && patients.size() >= 0) {
-			patients.add(patient);
-		}
+		patients.add(patient);
+
 	}
 
 	public ArrayList<Patient> getPatients() {
@@ -32,14 +29,12 @@ public class Hospital {
 	}
 
 	public void assignPatientsToDoctors() throws DoctorFullException {
-		int patientNum = 0;
-		for (Doctor doctor : doctors) {
-			if (patientNum < patients.size()) {
-				for (int i = 0; i < 3; i++) {
-					doctor.assignPatient(patients.get(patientNum));
-					System.out.println(patientNum);
+
+		for (int j = 0; j < 3; j++) {
+			for (int i = 0; i < doctors.size(); i++) {
+				if (patients.size() > (i + (3 * j))) {
+					doctors.get(i).assignPatient(patients.get(i + (3 * j)));
 				}
-				patientNum++;
 			}
 		}
 	}
